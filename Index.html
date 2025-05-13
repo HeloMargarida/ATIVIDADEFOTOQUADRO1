@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário com CEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Endereço por CEP</h2>
+        <form onsubmit="salvarDados(event)">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" onblur="buscarCEP()" placeholder="Digite o CEP">
+
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" id="logradouro" name="logradouro" placeholder="Rua, avenida, etc.">
+
+            <label for="uf">UF:</label>
+            <input type="text" id="uf" name="uf" placeholder="Estado">
+
+            <input type="submit" value="Salvar Informações">
+        </form>
+    </div>
+
+    <div id="dados-salvos" class="dados-salvos" style="display: none;">
+        <h3>📦 Dados Salvos:</h3>
+        <p><strong>CEP:</strong> <span id="dadosCep"></span></p>
+        <p><strong>Logradouro:</strong> <span id="dadosLogradouro"></span></p>
+        <p><strong>UF:</strong> <span id="dadosUF"></span></p>
+    </div>
+</body>
+
+</html>
